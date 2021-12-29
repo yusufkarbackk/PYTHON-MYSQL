@@ -5,12 +5,13 @@ import delete_impl
 import os
 
 
-def menu():
+while(True):
     print('''selamat datang di aplikasi booking travel 
     \n1.insert transaksi 
     \n2.show transaksi 
     \n3.update transaksi 
-    \n4.delete transaksi''')
+    \n4.delete transaksi
+    \n5.exit''')
 
 
 # input sebagai pilihan user
@@ -26,7 +27,7 @@ def menu():
         update_impl.update_transaksi()
     elif pilihan_user == '4':
         delete_impl.delete_transaksi()
-
-
-while(True):
-    menu()
+    elif pilihan_user == '5':
+        break
+    else:
+        print('Maaf menu tidak ditemukan')

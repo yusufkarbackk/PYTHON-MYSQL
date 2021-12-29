@@ -4,7 +4,7 @@ import delete
 
 def delete_transaksi():
     # panggil function show_impl() untuk menampilkan data
-    show_impl.show_data()
+    show_impl.show_transaksi()
 
     # input id yang akan di delete
     id = int(input('masukan id transaksi: '))

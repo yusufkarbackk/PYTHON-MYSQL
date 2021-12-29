@@ -4,7 +4,7 @@ import update
 
 def update_transaksi():
     # panggil fungsi show_impl untuk menampilkan data
-    show_impl.show_data()
+    show_impl.show_transaksi()
 
     # input id pada transaksi yang status nya akan diubah
     id = int(input('masukan id transaksi: '))

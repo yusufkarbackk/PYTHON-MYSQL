@@ -1,5 +1,6 @@
 import mysqlconnected as mysql_connection
 
+
 def delete_data(id):
     try:
         # koneksi ke database
@@ -16,11 +17,10 @@ def delete_data(id):
 
         cursor.close()
 
-    #error handling jika terjadi error
+    # error handling jika terjadi error
     except mysql_connection.mysql_error() as error:
         print("gagal terkoneksi ke tabel", error)
     finally:
         if (db):
             db.close()
             print("koneksi mysql Selesai")
-
