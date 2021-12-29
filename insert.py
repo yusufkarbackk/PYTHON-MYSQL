@@ -2,7 +2,7 @@ import datetime
 from mysqlconnected import connect_sql
 
 
-def insert_transaksi(nama, email, destinasi, tanggal_pesan):
+def insert_data(nama, email, destinasi, tanggal_pesan):
 
     # koneksi ke database
     db = connect_sql()
@@ -20,7 +20,6 @@ def insert_transaksi(nama, email, destinasi, tanggal_pesan):
     cursor.close()
 
 
-insert_transaksi('yusuf', 'yusuf@email.com', 'bali', datetime.datetime.now())
 
 
 'selasa, 28 desember => membuat tabel mahasiswa dan fungsi CRUD untuk tabel mahasiswa'

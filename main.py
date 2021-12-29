@@ -1,25 +1,32 @@
-import sys
-sys.path.append('/FIX PYTHON/implements')
+import insert_impl
+import show_impl
+import update_impl
+import delete_impl
+import os
 
 
-print('''selamat datang di aplikasi peminjaman buku 
-\n1. insert transaksi 
-\n2.show transaksi 
-\n3. update transaksi 
-\n4.delete transaksi''')
+def menu():
+    print('''selamat datang di aplikasi booking travel 
+    \n1.insert transaksi 
+    \n2.show transaksi 
+    \n3.update transaksi 
+    \n4.delete transaksi''')
+
 
 # input sebagai pilihan user
-pilihan_user = input('silahkan pilih aktifitas: ')
+    pilihan_user = input('silahkan pilih aktifitas: ')
+    os.system('clear')
 
 # cek menu apa yang dipilih user
-if pilihan_user == '1':
-    insert_transaksi()
-elif pilihan_user == '2':
-    # implements.show_data()
-    pass
-elif pilihan_user == '3':
-    # implements.update_impl()
-    pass
-elif pilihan_user == '4':
-    pass
-    # implements.delete_impl()
+    if pilihan_user == '1':
+        insert_impl.insert_transaksi()
+    elif pilihan_user == '2':
+        show_impl.show_transaksi()
+    elif pilihan_user == '3':
+        update_impl.update_transaksi()
+    elif pilihan_user == '4':
+        delete_impl.delete_transaksi()
+
+
+while(True):
+    menu()

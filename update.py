@@ -15,4 +15,3 @@ def update_data(status, id):
 
     print("{} data diubah".format(cursor.rowcount))
 
-update_data('sukses', 4)

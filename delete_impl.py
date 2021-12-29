@@ -1,13 +1,13 @@
-import functions.delete as delete
 import show_impl
+import delete
 
 
-def delete_impl():
+def delete_transaksi():
     # panggil function show_impl() untuk menampilkan data
-    show_impl()
+    show_impl.show_data()
 
     # input id yang akan di delete
     id = int(input('masukan id transaksi: '))
 
     # panggil fungsi hapus_data_transaksi dari folder functions
-    delete.hapus_data_transaksi(id)
+    delete.delete_data(id)

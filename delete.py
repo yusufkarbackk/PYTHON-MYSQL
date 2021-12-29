@@ -1,6 +1,6 @@
 import mysqlconnected as mysql_connection
 
-def hapus_data_transaksi(id):
+def delete_data(id):
     try:
         # koneksi ke database
         db = mysql_connection.connect_sql()
@@ -24,4 +24,3 @@ def hapus_data_transaksi(id):
             db.close()
             print("koneksi mysql Selesai")
 
-hapus_data_transaksi(3)
