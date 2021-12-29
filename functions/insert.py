@@ -1,17 +1,20 @@
 import functions.mysqlconnected as mysqlconnected
 
 
-def insert_mahasiswa(nama, email, destinasi, tanggal_pesan, status, pembayaran):
+def insert_transaksi(nama, email, destinasi, tanggal_pesan):
 
+    #koneksi ke database
     db = mysqlconnected.connect_sql()
     cursor = db.cursor()
 
-    sql = "INSERT INTO transaksi_travel (nama, email, destinasi, tanggal_pesan, status_pembayaran) VALUES (%s, %s, %s,%s, %s)"
-    val = (nama, email, destinasi, tanggal_pesan, status, pembayaran)
+    #melakukan query insert
+    sql = "INSERT INTO transaksi_travel (nama, email, destinasi, tanggal_pesan) VALUES (%s, %s, %s,%s)"
+    val = (nama, email, destinasi, tanggal_pesan)
 
     cursor.execute(sql, val)
 
     db.commit()
+    cursor.close()
 
     print("{} data ditambahkan".format(cursor.rowcount))
 

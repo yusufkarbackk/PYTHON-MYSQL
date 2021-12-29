@@ -1,13 +1,13 @@
-import functions.mysqlconnected as mysqlconnected
-import mysql.connector
-
+import mysqlconnected as mysql_connection
 
 def hapus_data_transaksi(id):
     try:
-        db = mysqlconnected.connect_sql()
+        # koneksi ke database
+        db = mysql_connection.connect_sql()
         cursor = db.cursor()
         print("Connected to MYSQL")
 
+        # menjalankan query delete
         delete = "DELETE FROM transaksi_travel WHERE id = %s"
 
         cursor.execute(delete, (id, ))
@@ -16,7 +16,8 @@ def hapus_data_transaksi(id):
 
         cursor.close()
 
-    except mysql.connector.Error as error:
+    #error handling jika terjadi error
+    except mysql_connection.mysql_error() as error:
         print("gagal terkoneksi ke tabel", error)
     finally:
         if (db):

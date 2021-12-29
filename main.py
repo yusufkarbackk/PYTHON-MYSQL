@@ -9,8 +9,10 @@ print('''selamat datang di aplikasi peminjaman buku
 \n3. update transaksi 
 \n4.delete transaksi''')
 
+#input sebagai pilihan user
 pilihan_user = input('silahkan pilih aktifitas: ')
 
+#cek menu apa yang dipilih user
 if pilihan_user == '1':
     insert.insert_pinjaman()
 elif pilihan_user == '2':
