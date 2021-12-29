@@ -1,13 +1,13 @@
-import functions.insert as insert
 import datetime
 
 
-def insert_impl():
+def insert_transaksi():
     # input yang dibutuhkan untuk insert data
     nama = input('masukan nama: ')
-    email = int(input('masukan nim: '))
+    email = (input('masukan email: '))
     destinasi = input('masukan prodi: ')
-    tanggal_pesan = input('masukan judul buku: ')
+    tanggal_pesan = datetime.datetime.now()
 
-    #panggil fungsi insert_transaksi
-    insert.insert_transaksi(nama, email, destinasi, tanggal_pesan)
+    # panggil fungsi insert_transaksi
+    insert_transaksi(nama, email, destinasi, tanggal_pesan)
+insert_transaksi()

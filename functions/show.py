@@ -1,4 +1,4 @@
-import functions.mysqlconnected as mysql
+import mysqlconnected as mysql
 
 
 def show_data():
@@ -17,3 +17,5 @@ def show_data():
   print("Data Transaksi Travel :\n")
   for data in results:
     print(data)
+
+show_data()

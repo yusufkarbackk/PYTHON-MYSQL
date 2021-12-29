@@ -1,7 +1,6 @@
-import implements.insert_impl as insert
-import implements.show_impl as show
-import implements.delete_impl as delete
-import implements.update_impl as update
+import sys
+sys.path.append('/FIX PYTHON/implements')
+
 
 print('''selamat datang di aplikasi peminjaman buku 
 \n1. insert transaksi 
@@ -9,15 +8,18 @@ print('''selamat datang di aplikasi peminjaman buku
 \n3. update transaksi 
 \n4.delete transaksi''')
 
-#input sebagai pilihan user
+# input sebagai pilihan user
 pilihan_user = input('silahkan pilih aktifitas: ')
 
-#cek menu apa yang dipilih user
+# cek menu apa yang dipilih user
 if pilihan_user == '1':
-    insert.insert_pinjaman()
+    insert_transaksi()
 elif pilihan_user == '2':
-    show.show_data()
+    # implements.show_data()
+    pass
 elif pilihan_user == '3':
-    update.update_impl()
+    # implements.update_impl()
+    pass
 elif pilihan_user == '4':
-    delete.delete_impl()
+    pass
+    # implements.delete_impl()

@@ -1,4 +1,4 @@
-import functions.mysqlconnected as mysqlconnected
+import mysqlconnected as mysqlconnected
 
 
 def update_data(status, id):
@@ -14,3 +14,5 @@ def update_data(status, id):
     db.commit()
 
     print("{} data diubah".format(cursor.rowcount))
+
+update_data('sukses', 4)

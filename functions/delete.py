@@ -23,3 +23,5 @@ def hapus_data_transaksi(id):
         if (db):
             db.close()
             print("koneksi mysql Selesai")
+
+hapus_data_transaksi(3)
