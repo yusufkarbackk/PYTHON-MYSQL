@@ -13,7 +13,12 @@ def delete_data(id):
 
         cursor.execute(delete, (id, ))
         db.commit()
-        print("Hapus Data Sukses")
+        if cursor.rowcount <= 0:
+            print('maaf id yang dimasukan salah')
+            print("{} data diubah".format(cursor.rowcount))
+        else:
+            print('Hapus data sukses')
+            print("{} data diubah".format(cursor.rowcount))
 
         cursor.close()
 
